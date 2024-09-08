@@ -1,0 +1,30 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-chordpanda-dev-e5c74-authRole",
+      "UnauthRoleArn": "arn:aws:iam::408844806850:role/amplify-chordpanda-dev-e5c74-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::408844806850:role/amplify-chordpanda-dev-e5c74-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-chordpanda-dev-e5c74-deployment",
+      "UnauthRoleName": "amplify-chordpanda-dev-e5c74-unauthRole",
+      "StackName": "amplify-chordpanda-dev-e5c74",
+      "StackId": "arn:aws:cloudformation:us-east-1:408844806850:stack/amplify-chordpanda-dev-e5c74/d0eb7ce0-6da5-11ef-a19c-0affcc0e9d8b",
+      "AmplifyAppId": "d25d1absck3r8r"
+    },
+    "categories": {
+      "auth": {
+        "ChordPandaAuth": {
+          "facebookAppId": "8172341676147690",
+          "googleClientId": "1075817076615-i71ksjk36d7onobnre27ghbgagl2fnv3.apps.googleusercontent.com"
+        }
+      },
+      "function": {
+        "ChordPandaAuthCustomMessage": {
+          "REDIRECTURL": "http://localhost:3000/",
+          "EMAILSUBJECT": "Welcome to Chord Panda!",
+          "EMAILMESSAGE": "Thanks for signing up! Hope you create something cool. "
+        }
+      }
+    }
+  }
+}
