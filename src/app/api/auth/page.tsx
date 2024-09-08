@@ -1,4 +1,4 @@
-import { AuthFormWrapper } from '../../components/AuthFormWrapper';
+import { AuthFormWrapper } from '../../../components/AuthFormWrapper';
 
 const AuthPage: React.FC = () => {
   return (
