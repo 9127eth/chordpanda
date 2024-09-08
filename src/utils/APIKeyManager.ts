@@ -40,9 +40,11 @@ const CACHE_TTL = 3600000; // 1 hour in milliseconds
 export async function getCachedAPIKey(keyName: string): Promise<string> {
   const now = Date.now();
   if (cache[keyName] && now - cache[keyName].timestamp < CACHE_TTL) {
+    console.log(`Returning cached API key for ${keyName}`);
     return cache[keyName].value;
   }
 
+  console.log(`Fetching new API key for ${keyName}`);
   const apiKey = await getAPIKey(keyName);
   cache[keyName] = { value: apiKey, timestamp: now };
   return apiKey;

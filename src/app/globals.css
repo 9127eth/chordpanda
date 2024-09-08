@@ -15,17 +15,6 @@
   --accent-green: #BAD9B5;
 }
 
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --action-button: #FFB300;
-  --card-background: #1a1a1a;
-  --options-dropdown: #1a1a1a;
-  --main-card-text: #ffffff;
-  --alt-card-text: #cccccc;
-  --website-section: #2a2a2a;
-}
-
 body {
   color: var(--foreground);
   background: var(--background);

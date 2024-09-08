@@ -2,11 +2,16 @@ import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 
 export function APIKeyTest() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const [testResult, setTestResult] = useState<string | null>(null);
 
   const testAPIKey = async () => {
-    if (!session) {
+    if (status === 'loading') {
+      setTestResult('Loading session...');
+      return;
+    }
+
+    if (status === 'unauthenticated') {
       setTestResult('You must be logged in to test the API key.');
       return;
     }
@@ -23,7 +28,9 @@ export function APIKeyTest() {
 
   return (
     <div>
-      <button onClick={testAPIKey}>Test API Key</button>
+      <button onClick={testAPIKey} disabled={status === 'loading'}>
+        Test API Key
+      </button>
       {testResult && <p>{testResult}</p>}
     </div>
   );
