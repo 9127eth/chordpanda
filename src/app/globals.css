@@ -3,21 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF5E1;
+  --foreground: #8B4513;
+  --action-button: #FFB300;
+  --card-background: #F5F5F5;
+  --options-dropdown: #F5F5F5;
+  --main-card-text: #000000;
+  --alt-card-text: #333333;
+  --website-section: #E0E0E0;
+  --accent-red: #DD1C1A;
+  --accent-green: #BAD9B5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --action-button: #FFB300;
+  --card-background: #1a1a1a;
+  --options-dropdown: #1a1a1a;
+  --main-card-text: #ffffff;
+  --alt-card-text: #cccccc;
+  --website-section: #2a2a2a;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {

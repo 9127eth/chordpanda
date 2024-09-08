@@ -19,3 +19,32 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+
+# Dependencies
+/node_modules
+
+# Next.js build output
+/.next
+
+# Environment variables
+.env*
+
+# AWS Amplify
+/amplify/#current-cloud-backend
+/amplify/backend/amplify-meta.json
+/amplify/backend/awscloudformation
+/amplify/team-provider-info.json
+/aws-exports.js
+
+# macOS
+.DS_Store
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env.local

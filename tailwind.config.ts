@@ -11,9 +11,18 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        actionButton: "var(--action-button)",
+        cardBackground: "var(--card-background)",
+        optionsDropdown: "var(--options-dropdown)",
+        mainCardText: "var(--main-card-text)",
+        altCardText: "var(--alt-card-text)",
+        websiteSection: "var(--website-section)",
+        accentRed: "var(--accent-red)",
+        accentGreen: "var(--accent-green)",
       },
     },
   },
   plugins: [],
 };
+
 export default config;

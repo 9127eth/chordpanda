@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"components/HomePage.tsx -> ./SoundCardGenerator\":{\"id\":\"components/HomePage.tsx -> ./SoundCardGenerator\",\"files\":[\"static/chunks/_app-pages-browser_src_components_SoundCardGenerator_tsx.js\"]}}"
