@@ -122,6 +122,22 @@
           "resourceName": "ChordPandaAuthCustomMessage"
         }
       ]
+    },
+    "AMPLIFY_function_ChordPandaAuthCustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ChordPandaAuthCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_ChordPandaAuthCustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ChordPandaAuthCustomMessage"
+        }
+      ]
     }
   }
 }
