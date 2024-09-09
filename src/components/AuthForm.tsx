@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import { signUp, signIn, type SignUpInput, signInWithRedirect } from 'aws-amplify/auth';
+import { useRouter } from 'next/navigation';
 
 export function AuthForm() {
+  const router = useRouter();
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -22,7 +24,7 @@ export function AuthForm() {
         alert('Sign up successful. Please check your email for verification.');
       } else {
         await signIn({ username: email, password });
-        window.location.href = '/'; // Redirect to home page after successful sign in
+        router.push('/'); // Use Next.js routing instead of window.location
       }
     } catch (err: unknown) {
       if (err instanceof Error) {
