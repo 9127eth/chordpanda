@@ -1,9 +1,21 @@
 'use client';
 
-import { SessionProvider } from "next-auth/react";
+import React from 'react';
+import { Amplify } from 'aws-amplify';
 
-export function Providers({ children }: { children: React.ReactNode }) {
-  return (
-    <SessionProvider>{children}</SessionProvider>
-  );
+Amplify.configure({
+  Auth: {
+    Cognito: {
+      userPoolId: process.env.NEXT_PUBLIC_USER_POOL_ID as string,
+      userPoolClientId: process.env.NEXT_PUBLIC_USER_POOL_WEB_CLIENT_ID as string,
+    },
+  },
+});
+
+interface ProvidersProps {
+  children: React.ReactNode;
+}
+
+export function Providers({ children }: ProvidersProps) {
+  return <>{children}</>;
 }

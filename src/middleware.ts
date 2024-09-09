@@ -1,15 +1,15 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { getToken } from 'next-auth/jwt';
+import { getCurrentUser } from 'aws-amplify/auth';
+import '../amplify-config';
 
 export async function middleware(request: NextRequest) {
-  const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
-
-  if (!token && request.nextUrl.pathname.startsWith('/api/')) {
-    return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
+  try {
+    await getCurrentUser();
+    return NextResponse.next();
+  } catch {
+    return NextResponse.redirect(new URL('/api/auth', request.url));
   }
-
-  return NextResponse.next();
 }
 
 export const config = {
