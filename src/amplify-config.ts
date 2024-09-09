@@ -11,8 +11,18 @@ Amplify.configure({
         oauth: {
           domain: 'https://chordpanda.auth.us-east-1.amazoncognito.com',
           scopes: ['email', 'profile', 'openid'],
-          redirectSignIn: ['http://localhost:3000/'],
-          redirectSignOut: ['http://localhost:3000/'],
+          redirectSignIn: [
+            'https://chordpanda-qsazieon8-9127eths-projects.vercel.app/api/auth/callback/cognito',
+            'https://www.chordpanda.com/api/auth/callback/cognito',
+            'http://localhost:3000/api/auth/callback/cognito',
+            'http://localhost:3001/api/auth/callback/cognito'
+          ],
+          redirectSignOut: [
+            'https://chordpanda-qsazieon8-9127eths-projects.vercel.app/',
+            'https://www.chordpanda.com/',
+            'http://localhost:3000/',
+            'http://localhost:3001/'
+          ],
           responseType: 'code',
           providers: ['Google']
         }
