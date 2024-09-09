@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { signUp, signIn, type SignUpInput, signInWithRedirect } from 'aws-amplify/auth';
 
