@@ -39,8 +39,8 @@ export function AuthForm() {
     try {
       await signInWithRedirect({ provider: 'Google' });
     } catch (error) {
-      console.error('Error signing in with Google:', error);
-      setError('Failed to sign in with Google');
+      console.error('Error initiating Google sign-in:', error);
+      setError('Failed to initiate Google sign-in');
     }
   };
 

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:3003": "next dev -p 3003"
   },
   "dependencies": {
     "@aws-amplify/auth": "^6.4.0",

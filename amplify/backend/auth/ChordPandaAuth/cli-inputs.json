@@ -56,10 +56,9 @@
     "hostedUI": true,
     "hostedUIDomainName": "chordpanda",
     "authProvidersUserPool": [
-      "Facebook",
       "Google"
     ],
-    "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"email,public_profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
     "userPoolGroupList": [
       "1",
       "2"
@@ -94,7 +93,7 @@
     ],
     "permissions": [],
     "authTriggerConnections": "[\n  {\n    \"triggerType\": \"CustomMessage\",\n    \"lambdaFunctionName\": \"ChordPandaAuthCustomMessage\"\n  }\n]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"email\",\"openid\",\"profile\"],\"CallbackURLs\":[\"http://localhost:3000/auth/callback/\",\"http://localhost:3003/api/auth/callback/cognito/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"http://localhost:3003/\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"email\",\"openid\",\"profile\"],\"CallbackURLs\":[\"http://localhost:3003/api/auth/callback/cognito\"],\"LogoutURLs\":[\"http://localhost:3003/\"]}",
     "parentStack": {
       "Ref": "AWS::StackId"
     }

@@ -7,7 +7,7 @@ exports.handler = async (event) => {
     const { codeParameter } = event.request;
     const { region, userName } = event;
     const { clientId } = event.callerContext;
-    const redirectUrl = `${process.env.REDIRECTURL}/?username=${userName}`;
+    const redirectUrl = 'http://localhost:3003/api/auth/callback/cognito';
     const resourcePrefix = process.env.RESOURCENAME.split('CustomMessage')[0];
 
     const hyphenRegions = [
